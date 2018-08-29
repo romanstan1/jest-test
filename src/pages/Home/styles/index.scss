@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css?family=Biryani:800|Roboto:400,500');
+@import "src/styles/_variables";
+
+div.Home {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+
+  div.Heading {
+    font-size: 180%;
+    h1 {
+      margin: 0;
+      font-weight: 800;
+      letter-spacing: 3px;
+      font-family: 'Biryani', 'Roboto', sans-serif;
+      line-height: 120%;
+    }
+  }
+
+  div.About {
+    // padding-top: 50px;
+    align-self: flex-start;
+    font-size: 16px;
+    line-height: 1.5;
+    max-width: 700px;
+    span {
+      color: $brightblue;
+    }
+  }
+
+  div.ToDos {
+    grid-area: 4 / 2 / 4 / 2;
+    ul {
+      margin: 0;
+      padding: 0;
+      li {
+        position: relative;
+        list-style:none;
+        padding: 15px 30px;
+        border-bottom: 1px solid #dee2e8;
+        &::before{
+          position: absolute;
+          top: 16px;
+          left: 10px;
+          color: $brightblue;
+          content: "•";
+        }
+        div {
+          position: absolute;
+          right: 4px;
+          top: 50%;
+          transform: translate(0%, -50%);
+          cursor: pointer;
+          color: $brightblue;
+          font-size: 12px;
+          background: #dee2e8;
+          padding: 5px 20px;
+          text-transform: uppercase;
+          opacity: 0.8;
+          &:hover{
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+div.AddToDoModal {
+  padding: 50px 5px;
+  display: flex;
+  // justify-content: space-around;
+  // align-items:center;
+  div.button {
+    margin: 0 30px;
+    background: $brightblue;
+    color: white;
+    padding: 5px 18px;
+    cursor: pointer;
+    font-size: 15px;
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+  input {
+    width: 350px;
+    line-height: 23px;
+    outline: none;
+    border: 2px solid $navyblue;
+    text-indent: 5px;
+  }
+}
